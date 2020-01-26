@@ -17,7 +17,12 @@ RUN \
 # Assumes you have downloaded eramaba community tarball to c241.tgz
 # e.g.: https://downloadseramba.s3-eu-west-1.amazonaws.com/CommunityTGZ/c241.tgz
 #ADD c241.tgz /var/www/sites
-ADD c262.tgz /var/www/sites
+#ADD c262.tgz /var/www/sites
+ADD c281.tgz /var/www/sites
+
+RUN \
+  cd /var/www/sites \
+  && tar -zxvf c281.tgz
 
 # Fix for broken community version which does not have NotificationSystem
 RUN \

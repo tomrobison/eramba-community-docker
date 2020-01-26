@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   db:
-    image: markz0r/eramba-db
+    image: eramba-db:c281
     container_name: eramba-community-docker_db_1
     restart: always
     volumes:
@@ -17,7 +17,7 @@ services:
     #  'mysqld --innodb-flush-method=fsync'
   app:
     # image: digitorus/eramba:enterprise
-    image: markz0r/eramba-app
+    image: eramba-app:c281
     container_name: eramba-community-docker_app_1
     depends_on:
       - db
